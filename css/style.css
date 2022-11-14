@@ -1,0 +1,220 @@
+@font-face {
+    font-family: "Aileron";
+    src: url(../font/Aileron-Regular.otf);
+}
+* {
+    font-family: Aileron;
+}
+body {
+    color: #a3bbe0;
+    background-image: url("../images/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+} 
+
+/* ------------- MENU ------------- */
+
+#menu nav {
+    list-style: none;   /*enlève les puces de la liste*/
+    display: flex;      /*rend les éléments "flexibles"*/
+    justify-content: space-evenly;  /*les éléments étant flexibles, cette ligne les espace*/
+    padding: 30px 0 20px 0;
+}
+
+/*comportement du lien par défaut*/
+nav a, nav button {
+    position: relative;
+    padding: 15px 25px;
+    font-size: 25px;
+    color: #A3BBE0;
+    background-color: #3863A8;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 2px solid #5F88CA;
+    cursor: pointer; /*Pour que le bouton ait aussi le curseur : pointer*/
+}
+
+nav button {
+    margin-top: -11.5%; /*ici le bouton été décalé jsp pk donc j'ai forcé l'alignement (à l'oeuil nu)*/
+}
+
+/*le before est l'élément animé qui donne l'effet slider aux liens*/
+nav a:not(.sub-link)::before, nav button::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-color: #3863A8;
+    z-index: -1;
+    transform: scaleX(0) scaleY(0);
+    transform-origin: center;
+    transition: ease 100ms;
+}
+/*quand on survole le lien, on anime le before*/
+nav a:hover::before, nav button:hover::before {
+    transform: scaleX(1) scaleY(1);
+    border-radius: 50px;
+}
+a {
+   color: #A3BBE0;
+   margin: 10px;
+   font-size: 20px;
+}
+
+/* --- Sous liens Histoire --- */
+
+.sub {
+    opacity: 0;
+    display: none;
+    position: absolute;
+}
+.sub ul {
+    list-style: none;
+}
+.sub li {
+    padding-bottom: 20px;
+    margin-left: -10px;
+}
+.sub a {
+    font-size: 20px;
+    padding: 4px 6px;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+/*petite flèche qui s'affiche quand on passe sur un des sub-link*/
+#fleche::before {
+    content: ">";
+    color: #A3BBE0;
+}
+
+
+
+/* ------------- CORPS -------------*/
+
+/* --- Titres --- */
+h1 {
+    text-align: center;
+    color: #A3BBE0;
+    font-size: 60px;
+}
+
+/* --- Sous-Titres --- */
+h3 {
+    font-size: 30px;
+    text-decoration: underline 2px;
+}
+
+/* --- Paragraphes --- */
+p, .normal-ol li {
+    font-size: 30px;
+}
+.normal-paragraph {
+    padding: 10px 20px;
+}
+img {
+    border-radius: 50px;
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+}
+
+/* --- index.html --- */
+#corps {
+    margin: 5%;
+}
+.normal-ol li {
+    padding-top: 2%;
+    list-style: upper-roman inside;
+}
+.normal-ol li ol li {
+    list-style: decimal inside;
+}
+div:not(.sub):not(.timeline):not(.decorative) {
+    background-color: #343443b4;
+    border-radius: 30px;
+    padding: 10px 20px 40px 20px;
+    height: auto;
+    margin-bottom: 15px;
+}
+span {
+    color: #F15D53;
+}
+
+/* --- Frises Chronologiques --- */
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+}
+/*Ligne de la timeline*/
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color: #F15D53;
+}
+.timeline ul {
+    margin: 0;
+    padding: 0;
+}
+.timeline ul li {
+    position: relative;
+    width: 40%;
+    padding: 50px 40px;
+    list-style: none;
+}
+.timeline .content h3 {
+    position: relative;
+    cursor: pointer;
+    color: #F07042;
+    margin: 20px;
+}
+.timeline .content img{
+    display: none;
+    opacity: 0;
+}
+/*Alternance gauche-droite des éléments de la timeline*/
+.timeline ul li:nth-child(odd) {
+    text-align: right;
+    float: left;
+    clear: both;
+}
+/*Alternance gauche-droite des éléments de la timeline*/
+.timeline ul li:nth-child(even) {
+    text-align: left;
+    float: right;
+    clear: both;
+}
+/*Flèches à gauche/droite des éléments de la timeline*/
+.timeline ul li:nth-child(odd)::before {
+    content: "▶";
+    position: absolute;
+    top: 60px;
+    right: -5%;
+    font-size: 30px;
+    color: #3863A8;
+    text-shadow: -4px 6px#a3bbe0, -4px -6px#a3bbe0, 6.5px 0#a3bbe0;
+}
+/*Flèches à gauche/droite des éléments de la timeline*/
+.timeline ul li:nth-child(even)::before {
+    content: "◀";
+    position: absolute;
+    top: 60px;
+    left: -5%;
+    font-size: 30px;
+    color: #a3bbe0;
+    text-shadow: 4px 6px #3863A8, 4px -6px #3863A8, -6.5px 0 #3863A8;
+}
+
+
+li:hover {
+    color: #F15D53;
+    transition: ease 400ms;
+    cursor: default;
+}

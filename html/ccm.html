@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Voiture Autonome - CCM</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/index.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- MENU -->
+    <section id="menu">  <!-- cette section a un id et non une classe 
+                                    car c'est plus simple à récupérer en js-->
+        <nav>
+            <li><a href="../index.html">Accueil</a></li>
+            <li>
+                <button id="history">Histoire</button> <!--un bouton (et non lien) qui ouvre la liste ci-dessous-->
+                <div class = "sub">
+                    <ul>
+                        <li><a href="passe.html" class="sub-link">Passé</a></li>
+                        <li><a href="present.html"class="sub-link">Présent</a></li>
+                        <li><a href="futur.html" class="sub-link">Futur</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="ccm.html">CCM</a></li>
+            <li><a href="entreprises.html">Entreprises</a></li>
+            <li><a href="legislation.html">Législation</a></li>
+            <li><a href="enjeux.html">Enjeux & Défis</a></li>
+            <li><a href="piratage.html">Piratage</a></li>
+            <li><a href="conclu.html">Conclusion</a></li>
+        </nav>
+        <br>
+        <h1 class="big-title">Comment ça marche ?</h1>
+    </section>
+
+    <section id="corps">
+        <div>
+            <h3>Les différents niveaux d'autonomie :</h3>
+            <img src="../images/autonomie.png" alt="Différents niveaux d'autonomie">
+        </div>
+        <div>
+            <h3>Différences d’histoire entre les entreprises faisant diverger les procédés :</h3>
+            <p>
+                <span><i>Radars et Lidars</i></span><br>
+                Si les radars envoyant des ondes électromagnétiques sont des technologies déjà connues, le Lidar, ou « light detection and ranging », ce qui signifie « détection lumineuse et estimation des distance » en français est un système inventé dans les années 1960 et refaisant surface dans le monde de la tech d’une façon bien plus optimisée et raffinée de nos jours !<br>
+                Une fois logé au-dessus de la voiture, le système de conduite autonome a accès à une <span>reconstitution tridimensionnelle</span> de son environnement.<br><br>
+                C’est le système utilisé par <span>Waymo</span>, qui use d’une grande flotte de voitures montées de capteurs scannant les routes<br><br>
+                <span><i>Caméras</i></span><br>
+                Tesla a choisi de délibérément supprimer les capteurs Lidar de leurs voitures et d’utiliser des <span>ordinateurs embarqués</span> pour étudier les retours des caméras de leurs modèles.<br><br>
+                Ils développent également des technologies pour voir à travers les pluies les plus fortes dans les 8 caméras embarquées dans ses derniers modèles.
+            </p>
+        </div>
+    </section>
+    
+</body>
+</html>

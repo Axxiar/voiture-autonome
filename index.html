@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Voiture Autonome - Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/index.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- MENU -->
+    <section id="menu">  <!-- cette section a un id et non une classe 
+                                    car c'est plus simple à récupérer en js-->
+        <nav>
+            <li><a href="index.html">Accueil</a></li>
+            <li>
+                <button id="history">Histoire</button> <!--un bouton (et non lien) qui ouvre la liste ci-dessous-->
+                <div class = "sub">
+                    <ul>
+                        <li><a href="./html/passe.html" class="sub-link">Passé</a></li>
+                        <li><a href="./html/present.html"class="sub-link">Présent</a></li>
+                        <li><a href="./html/futur.html" class="sub-link">Futur</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="./html/ccm.html">CCM</a></li>
+            <li><a href="./html/entreprises.html">Entreprises</a></li>
+            <li><a href="./html/legislation.html">Législation</a></li>
+            <li><a href="./html/enjeux.html">Enjeux & Défis</a></li>
+            <li><a href="./html/piratage.html">Piratage</a></li>
+            <li><a href="./html/conclu.html">Conclusion</a></li>
+        </nav>
+        <br>
+        <h1>Voiture Autonome</h1>
+    </section>
+
+    <section id="corps">
+        <div id="def">
+            <h3>Définition :</h3>
+            <p class="normal-paragraph">Un <span>véhicule</span> autonome est un véhicule de transport capable de rouler sans l’intervention d'un être humain.<br><br>
+                À l’aide de nombreux capteurs et d’un logiciel de calcul élaboré, il est capable de se déplacer dans le trafic et de prendre des décisions tout seul, <span>sans l'apport d'un conducteur.</span></p>
+        </div>
+        <br>
+        <div id="summary">
+            <h3>Sommaire :</h3>
+            <ol class="normal-ol">
+                <li>Histoire
+                    <ol>
+                        <li>Passé</li>
+                        <li>Actuellement</li>
+                        <li>Futur</li>
+                    </ol>
+                </li>
+                <li>Comment ça marche ?</li>
+                <li>Enjeux et défis de la voiture autonome</li>
+                <li>Page7</li>
+                <li>Page8</li>
+                <li>Page9</li>
+                <li>Conclusion</li>
+            </ol>
+        </div>
+    </section>
+</body>
+</html>

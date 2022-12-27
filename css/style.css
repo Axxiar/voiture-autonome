@@ -48,6 +48,7 @@ nav a:not(.sub-link)::before, nav button::before {
     right: -10px;
     bottom: -10px;
     background-color: #3863A8;
+    filter: blur(4px);
     z-index: -1;
     transform: scaleX(0) scaleY(0);
     transform-origin: center;
